@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoredReadList } from "../../utility/addToDb";
+import { addToStoredReadList,  addToStoredWishList } from "../../utility/addToDb";
 
 const BookDetail = () => {
   const { bookId } = useParams();
@@ -26,6 +26,9 @@ const BookDetail = () => {
     addToStoredReadList(id)
   }
 
+  const handleAddToWishList = (id)=>{
+    addToStoredWishList(id)
+  }
   return (
     <div className="hero bg-base-200 mt-8 rounded-xl mb-8">
       <div className="hero-content flex-col lg:flex-row">
@@ -72,7 +75,7 @@ const BookDetail = () => {
           </div>
           <div className="flex gap-2">
             <button onClick={()=>handleMarkAsRead(bookId)} className="btn btn-outline">Read</button>
-            <button className="btn btn-primary">Wishlist</button>
+            <button onClick={()=>handleAddToWishList(bookId)} className="btn btn-primary">Wishlist</button>
           </div>
         </div>
       </div>
