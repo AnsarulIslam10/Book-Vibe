@@ -33,7 +33,6 @@ const getStoredWishList = () => {
 const addToStoredWishList = (id) => {
     const storedWishList = getStoredWishList();
     if (storedWishList.includes(id)) {
-        // already exists. do not add it
         console.log(id, 'already exists in the read list')
     }
     else {
@@ -43,4 +42,4 @@ const addToStoredWishList = (id) => {
     }
 }
 
-export {addToStoredReadList, addToStoredWishList}
+export {addToStoredReadList, addToStoredWishList, getStoredReadList}
