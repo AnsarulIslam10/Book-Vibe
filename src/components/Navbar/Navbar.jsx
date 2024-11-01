@@ -10,9 +10,9 @@ const Navbar = () => {
             <li className="mr-2">
               <NavLink to={'/listedBooks'}>Listed Books</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink>Pages to Read</NavLink>
-            </li>
+            </li> */}
     </>
   return (
     <div className="navbar bg-base-100">
